@@ -1,33 +1,14 @@
-import { useState } from 'react'
-import Navbar from '../components/Navbar';  
-import './App.css'
-import About from '../components/About'
-import Blog from '../components/Blog';
-import Profile from '../components/Profile';
+import React from 'react'
+import Navbar from './components/Navbar';
 
-function App() {
-  let Component
-  switch (window.location.pathname) {
-    case "/home":
-      Component = App
-    break
-    case "/about":
-      Component = About
-      break
-      case "/blog":
-        Component = Blog
-        break
-        case "/profile":
-          Component = Profile
-          break
-  }
+const App = () => {
+
 return (
-  <> 
-  <Navbar />
-  <Component /> 
-  </>
- 
-)
+  <div className='container'>
+   <Navbar/>
+  </div>
+  );
 }
+
 
 export default App
